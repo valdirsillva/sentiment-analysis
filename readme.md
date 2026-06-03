@@ -72,7 +72,7 @@ pip install -r requirements.txt
 ### Running the Application
 
 ```bash
-python api/server.py
+uvicorn app:app --reload --host 0.0.0.0 --port 800
 ```
 
 Then open your browser at `http://localhost:5000`.
