@@ -1,4 +1,5 @@
 
+import os
 import torch
 import torch.nn as nn
 from transformers import AutoTokenizer
@@ -34,7 +35,11 @@ model = SentimentLSTM(
     n_layers   = 3,
     dropout    = 0.2
 )
-model.load_state_dict(torch.load("sentiment_model.pth", map_location=device))
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "sentiment_model.pth")
+
+model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 model.to(device)
 model.eval()
 print("✅ Modelo carregado!\n")

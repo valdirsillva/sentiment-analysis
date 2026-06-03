@@ -200,7 +200,10 @@
         });
         const data = await res.json();
 
-        const isPos = data.label === "Positivo";
+        const isPos = data.label === "Positivo 😊";
+
+        // console.log(data);
+
         result.className = "result " + (isPos ? "positivo" : "negativo");
         document.getElementById("emoji").textContent = data.emoji;
         document.getElementById("label").textContent = data.label;
