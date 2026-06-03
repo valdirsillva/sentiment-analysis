@@ -58,7 +58,7 @@ sentiment-analysis/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/sentiment-analysis.git
+git clone https://github.com/valdirsillva/sentiment-analysis
 cd sentiment-analysis
 
 # Create and activate a virtual environment
